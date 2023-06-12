@@ -30,39 +30,22 @@ body, html {
 </body>
 <script src="https://lightning.production.helium.servismatrixcdn.com/v2/latest/bundle-messenger.js"></script>
 <script>
-        console.log('SB Init');
-        function initializeMessenger() {
-        const ServisbotApi = ServisBot.init({
-            "organization": "mcstandardbank",
-            "debug": true,
-            "context": {
-            },
-            "displayAvatar": true,
-            "displayLightbox": false,
-            "googleApiKey": "AIzaSyAhErElbOH29CzM52LNnf43o4a3l73QHjw",
-            "endpoint": "mcstandardbank-SBSAWelcomeBotBlueCard",
-            "displayWidget": true,
-            "displayHeader": true,
-            "alwaysOpen":false,
-            "sbRegion": "eu-1"
-        });
-        Setup event listener to handle Messenger events
-ServisbotApi.on('Messenger', (event) => {
-    /*
-    *   Each Messenger event has a type and a value
-    *   the type is related to the specific interaction type
-    *   of the event
-    */
-    console.log(`Type: ${event.type}, Value: ${event.value}`);
+   
+ServisBot.init({
+  "organization": "mcstandardbank",
+  "debug": false,
+  "context": {},
+  "displayRoundel": true,
+  "endpoint": "mcstandardbank-SBSAWelcomeBotBlueCard",
+  "displayWidget": true,
+  "displayHeader": true,
+  "alwaysOpen": false,
+  "sbRegion": "eu-1",
+  "googleApiKey": "AIzaSyAhErElbOH29CzM52LNnf43o4a3l73QHjw",
+  "usageApiKey": null,
+  "autoStart": false
 });
-    }
 
-    window.onload = (event) => {
-            window.localStorage.clear();
-            initializeMessenger();
-            console.log('The page has fully loaded');
-        };
 
-https://mastercard.zoom.us/j/4537445983?pwd=Wk41aUI4eVJGbURoeVZrZklaY2VwZz09#success
 </script>
 </html>
