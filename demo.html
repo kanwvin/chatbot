@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("img/background.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+
+</body>
+<script src="https://lightning.production.helium.servismatrixcdn.com/v2/latest/bundle-messenger.js"></script>
+<script>
+   
+const ServisbotApi = ServisBot.init({
+  "organization": "mcstandardbank",
+  "debug": false,
+  "context": {},
+  "displayRoundel": true,
+  "endpoint": "mcstandardbank-SBSAWelcomeBotBlueCard",
+  "displayWidget": true,
+  "displayHeader": true,
+  "alwaysOpen": false,
+  "sbRegion": "eu-1",
+  "googleApiKey": "AIzaSyAhErElbOH29CzM52LNnf43o4a3l73QHjw",
+  "usageApiKey": null,
+  "autoStart": false
+});
+
+ServisbotApi.on('Messenger', (event) => {
+    /*
+    *   Each Messenger event has a type and a value
+    *   the type is related to the specific interaction type
+    *   of the event
+    */
+    console.log(`Type: ${event.type}, Value: ${event.value}`);
+})
+</script>
+</html>
