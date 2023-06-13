@@ -36,7 +36,7 @@ const ServisbotApi = ServisBot.init({
   "debug": false,
   "context": {},
   "displayRoundel": true,
-  "endpoint": "devmcqnbegypt-bebasata-bot",
+  "endpoint": "bebasata-bot",
   "displayWidget": true,
   "displayHeader": true,
   "alwaysOpen": false,
@@ -48,12 +48,9 @@ const ServisbotApi = ServisBot.init({
 
 
 
+
 ServisbotApi.on('Messenger', (event) => {
-    /*
-    *   Each Messenger event has a type and a value
-    *   the type is related to the specific interaction type
-    *   of the event
-    */
+    
     console.log(`Type: ${event.type}, Value: ${event.value}`);
 })
 </script>
